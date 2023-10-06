@@ -1,0 +1,18 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+local Window = Library.CreateLib("PLS FOLLOW | Txxicu Scripts", "RJTheme3")
+
+local Tab = Window:NewTab("Scripts")
+
+local Section = Tab:NewSection("Scripts")
+
+Section:NewButton("Buy", "ButtonInfo", function()
+    print("Clicked")
+local args = {
+    [1] = "buyasset",
+    [2] = 14975217331,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("StandEvent"):FireServer(unpack(args))
+end)
